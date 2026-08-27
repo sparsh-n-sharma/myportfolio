@@ -2,7 +2,7 @@
 
 import { SectionTransition } from "@/components/motion/SectionTransition";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { faqItems } from "@/lib/seo";
+import { faqItems } from "@/lib/data/faq";
 import { motion } from "framer-motion";
 
 export function FaqSection() {

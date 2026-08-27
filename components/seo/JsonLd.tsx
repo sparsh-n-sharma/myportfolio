@@ -4,6 +4,7 @@ import {
   getLocalBusinessJsonLd,
   getPersonJsonLd,
   getProfessionalServiceJsonLd,
+  getProfilePageJsonLd,
   getWebSiteJsonLd,
 } from "@/lib/seo";
 
@@ -12,6 +13,7 @@ const schemas = [
   getLocalBusinessJsonLd(),
   getProfessionalServiceJsonLd(),
   getWebSiteJsonLd(),
+  getProfilePageJsonLd(),
   getItemListJsonLd(),
   getFaqJsonLd(),
 ];

@@ -10,6 +10,7 @@ import { AboutSection } from "@/components/sections/AboutSection";
 import { AudienceSection } from "@/components/sections/AudienceSection";
 import { BeforeAfterSection } from "@/components/sections/BeforeAfterSection";
 import { ContactSection } from "@/components/sections/ContactSection";
+import { BrandDiscoverySection } from "@/components/sections/BrandDiscoverySection";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { LocalSeoSection } from "@/components/sections/LocalSeoSection";
@@ -66,6 +67,7 @@ export function PortfolioShell() {
             <AudienceSection />
             <LocalSeoSection />
             <AboutSection />
+            <BrandDiscoverySection />
             <FaqSection />
             <ContactSection />
           </main>
