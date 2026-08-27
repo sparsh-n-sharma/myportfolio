@@ -1,104 +1,134 @@
-# Deployment Guide — Sparsh Sharma Portfolio
+# Deployment Guide — Sparsh Edits Portfolio
 
-Zero-maintenance hosting: **GitHub → Vercel → custom domain**. No server bills for Sparsh.
-
-## Cost summary
-
-| Item | Cost |
-|------|------|
-| Vercel (Hobby tier) | Free for a portfolio this size |
-| Domain (`sparshsharma.com`) | ~₹800–1,200/year |
-| Email forwarding | Free (Cloudflare Email Routing or Zoho Mail free tier) |
+**GitHub:** https://github.com/sparsh-n-sharma/myportfolio  
+**Domain:** `sparshedits.com`  
+**Hosting:** Vercel (free Hobby tier)
 
 ---
 
-## Step 1 — Push to GitHub
+## Fix: "You don't have access" on Vercel
 
-If the repo is not on GitHub yet:
+This happens when Vercel’s GitHub connection doesn’t match the account that owns the repo. Do this **on Sparsh’s computer**, logged in as **sparsh-n-sharma** on both GitHub and Vercel.
+
+### Step A — Re-authorize GitHub on Vercel
+
+1. Log into [vercel.com](https://vercel.com) as Sparsh (not Vishal’s account).
+2. Go to **Account Settings → Authentication** (or **Settings → Git**).
+3. **Disconnect** GitHub if it’s connected to the wrong account.
+4. **Connect GitHub** again → sign in as **sparsh-n-sharma**.
+5. When GitHub asks which repos Vercel can access, choose **“Only select repositories”** and pick **`myportfolio`** (or “All repositories”).
+
+### Step B — Fix GitHub App permissions
+
+1. On GitHub (as **sparsh-n-sharma**): **Settings → Applications → Installed GitHub Apps → Vercel**.
+2. Click **Configure**.
+3. Under **Repository access**, ensure **`sparsh-n-sharma/myportfolio`** is selected.
+4. Save.
+
+### Step C — Import the project
+
+1. Vercel dashboard → **Add New → Project**.
+2. You should see **`sparsh-n-sharma/myportfolio`** in the list.
+3. Import → Framework: **Next.js** (auto) → **Deploy**.
+
+If the repo still doesn’t appear, use **CLI deploy** below (no GitHub import needed).
+
+---
+
+## Option 1 — Deploy via Vercel CLI (bypasses GitHub import issues)
+
+Run on Sparsh’s machine in the project folder:
 
 ```bash
-git init
-git add .
-git commit -m "Initial portfolio deploy"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/sparsh-portfolio.git
-git push -u origin main
+cd path/to/Sparsh
+npm install
+npx vercel@59.7.0 login
 ```
 
----
+Log in with **Sparsh’s Vercel account** when the browser opens.
 
-## Step 2 — Deploy on Vercel
+```bash
+npx vercel@59.7.0 --prod
+```
 
-1. Go to [vercel.com](https://vercel.com) and sign in with GitHub
-2. Click **Add New → Project**
-3. Import the `sparsh-portfolio` repository
-4. Framework preset: **Next.js** (auto-detected)
-5. Click **Deploy**
+Answer prompts:
 
-Vercel assigns a URL like `sparsh-portfolio.vercel.app`. Every push to `main` auto-redeploys.
+- **Set up and deploy?** Yes
+- **Which scope?** Sparsh’s personal account
+- **Link to existing project?** No (first time)
+- **Project name?** `sparsh-edits` or `myportfolio`
+- **Directory?** `./` (default)
 
-### Build settings (defaults work)
+You’ll get a live URL like `https://myportfolio-xxx.vercel.app`.
 
-- Build command: `npm run build`
-- Output: Next.js App Router (automatic)
-- No environment variables required (contact uses `mailto:`)
-
----
-
-## Step 3 — Buy & connect domain
-
-1. Buy `sparshsharma.com` from [Cloudflare Registrar](https://www.cloudflare.com/products/registrar/), Namecheap, or GoDaddy
-2. In Vercel: **Project → Settings → Domains → Add** `sparshsharma.com` and `www.sparshsharma.com`
-3. Vercel shows DNS records — add them at your registrar:
-
-   | Type | Name | Value |
-   |------|------|-------|
-   | A | `@` | `76.76.21.21` |
-   | CNAME | `www` | `cname.vercel-dns.com` |
-
-4. Wait for DNS propagation (usually 5–30 minutes). Vercel enables HTTPS automatically.
+To link GitHub later: Vercel project → **Settings → Git → Connect**.
 
 ---
 
-## Step 4 — Email setup (no server)
+## Option 2 — GitHub → Vercel (auto-deploy on push)
 
-Sparsh needs `hello@sparshsharma.com` to receive inquiries.
+After Steps A–C above:
 
-### Option A — Cloudflare Email Routing (recommended if domain is on Cloudflare)
+| Setting | Value |
+|---------|--------|
+| Repository | `sparsh-n-sharma/myportfolio` |
+| Branch | `main` |
+| Build command | `npm run build` |
+| Output | Next.js (automatic) |
+| Env vars | None required |
 
-1. Cloudflare dashboard → **Email → Email Routing**
-2. Add destination: Sparsh's Gmail
-3. Create route: `hello@sparshsharma.com` → forward to Gmail
-
-### Option B — Zoho Mail free tier
-
-1. Sign up at [zoho.com/mail](https://www.zoho.com/mail/)
-2. Add domain and verify DNS
-3. Create mailbox `hello@sparshsharma.com`
-
-Update `siteContent.email` in `lib/data/content.ts` if using a different address.
+Every push to `main` redeploys automatically.
 
 ---
 
-## Step 5 — Post-deploy checklist
+## Connect `sparshedits.com`
 
-- [ ] Visit `https://sparshsharma.com` — all sections load
-- [ ] Test contact form — opens mail app with pre-filled subject/body
-- [ ] Test on mobile — before/after slider, video previews, contact drawer
-- [ ] Replace placeholder media (see `docs/ASSET_CHECKLIST.md`)
-- [ ] Update Open Graph image if using a custom photo (`media.ogImage` + `app/layout.tsx`)
+### 1. Add domain in Vercel
+
+1. Open the deployed project on Vercel.
+2. **Settings → Domains → Add**
+3. Add both:
+   - `sparshedits.com`
+   - `www.sparshedits.com`
+4. Vercel shows the DNS records you need.
+
+### 2. DNS at your domain registrar
+
+Where you bought `sparshedits.com` (GoDaddy, Namecheap, Cloudflare, etc.):
+
+| Type | Name / Host | Value |
+|------|-------------|--------|
+| **A** | `@` (or blank) | `76.76.21.21` |
+| **CNAME** | `www` | `cname.vercel-dns.com` |
+
+**If using Cloudflare:** set proxy to **DNS only** (grey cloud) for the first deploy, or use Vercel’s recommended Cloudflare setup.
+
+Wait 5–30 minutes (up to 48h in rare cases). Vercel issues HTTPS automatically.
+
+### 3. Set primary domain
+
+In Vercel **Domains**, set `sparshedits.com` as primary and redirect `www` → apex (or vice versa — pick one).
 
 ---
 
-## Maintenance for Sparsh (non-technical)
+## Email (optional)
 
-Sparsh does **not** need to touch servers. To update content:
+For `hello@sparshedits.com` or similar:
 
-1. Send you (or a developer) new video links and copy
-2. Developer updates `lib/data/` files and pushes to GitHub
-3. Vercel redeploys automatically in ~1 minute
+- **Cloudflare Email Routing** (free) — forward to Sparsh’s Gmail
+- **Zoho Mail** (free tier) — full mailbox
 
-For urgent text-only changes, Vercel's dashboard also supports redeploys from GitHub without local setup.
+Update `siteContent.email` in `lib/data/content.ts` after setup.
+
+---
+
+## Post-deploy checklist
+
+- [ ] https://sparshedits.com loads
+- [ ] https://www.sparshedits.com redirects correctly
+- [ ] Contact form opens mail app
+- [ ] Mobile layout works (slider, videos, drawer)
+- [ ] Replace demo media (`docs/ASSET_CHECKLIST.md`)
 
 ---
 
@@ -106,7 +136,19 @@ For urgent text-only changes, Vercel's dashboard also supports redeploys from Gi
 
 | Issue | Fix |
 |-------|-----|
-| Domain not connecting | Verify DNS records match Vercel exactly; wait up to 48h |
-| Videos not playing | Check video URLs are HTTPS and publicly accessible |
-| Build fails on Vercel | Run `npm run build` locally first; fix TypeScript errors |
-| Contact form does nothing | `mailto:` requires a local email client — consider Formspree later if leads are missed |
+| **You don't have access** | Reconnect GitHub on Vercel as `sparsh-n-sharma`; grant Vercel app access to `myportfolio` (see above) |
+| Repo not in Vercel list | Repo must be under the same GitHub account connected to Vercel |
+| Domain not verifying | Double-check A + CNAME; disable Cloudflare proxy temporarily |
+| Build fails | Run `npm run build` locally; fix errors before pushing |
+| Wrong account deployed | `npx vercel logout` then `npx vercel login` as Sparsh |
+
+---
+
+## Local git remote (for developers)
+
+```bash
+git remote set-url origin https://github.com/sparsh-n-sharma/myportfolio.git
+git push -u origin main
+```
+
+Pushes must use Sparsh’s GitHub credentials (or a collaborator with write access).
