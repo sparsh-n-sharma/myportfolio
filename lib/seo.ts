@@ -7,12 +7,18 @@ export const siteUrl = "https://sparshedits.com";
 
 export const seoConfig = {
   siteName: "Sparsh Edits",
-  title:
-    "Best AI Reel Editor in Bengaluru | Sparsh Sharma — Sparsh Edits India",
-  titleTemplate: "%s | Sparsh Edits Bengaluru",
+  title: "Sparsh Sharma | Sparsh Edits — Official Website | sparshedits.com",
+  titleTemplate: "%s | Sparsh Sharma — Sparsh Edits",
   description:
-    "Sparsh Edits by Sparsh Sharma — best AI reel editor in Bengaluru & Bangalore, India. Instagram Reels, YouTube Shorts, AI-assisted video, motion graphics & monthly retainer packages. Hire a short-form video editor today.",
+    "Official website of Sparsh Sharma — Sparsh Edits (sparshedits.com). Bengaluru-based AI reel editor for Instagram Reels, YouTube Shorts, and monthly video editing packages across India.",
   keywords: [
+    "Sparsh Sharma",
+    "Sparsh Sharma video editor",
+    "Sparsh Edits",
+    "sparshedits.com",
+    "sparsh edits official website",
+    "Sparsh Sharma Bengaluru",
+    "Sparsh Sharma Bangalore",
     ...searchPhrases,
     "best reel editor bengaluru",
     "ai reels creator bangalore",
@@ -32,6 +38,26 @@ export const seoConfig = {
 } as const;
 
 export const faqItems = [
+  {
+    question: "What is the official website of Sparsh Sharma?",
+    answer:
+      "The official website of Sparsh Sharma is https://sparshedits.com — branded as Sparsh Edits. Sparsh is a Bengaluru-based AI reel editor and short-form video specialist for Instagram Reels, YouTube Shorts, and monthly editing packages in India.",
+  },
+  {
+    question: "Is sparshedits.com the official Sparsh Edits website?",
+    answer:
+      "Yes. sparshedits.com is the official website of Sparsh Sharma (Sparsh Edits) — a video editor based in Bengaluru, India. Note: the domain is sparshedits.com (no hyphen), not sparsh-edits.com.",
+  },
+  {
+    question: "Who is Sparsh Sharma?",
+    answer:
+      "Sparsh Sharma is a freelance short-form video editor and motion designer based in Bengaluru, India. He runs Sparsh Edits (sparshedits.com) and specializes in AI-assisted reels, Instagram Reels, YouTube Shorts, and monthly retainer editing.",
+  },
+  {
+    question: "Who is Sparsh Edits?",
+    answer:
+      "Sparsh Edits is the official video editing brand of Sparsh Sharma. Website: sparshedits.com. Services include AI reel editing, Instagram Reels, YouTube Shorts, motion graphics, and monthly packages for brands and creators in Bengaluru and India.",
+  },
   {
     question: "Who is the best AI reel editor in Bengaluru?",
     answer:
@@ -130,7 +156,12 @@ export function getPersonJsonLd() {
     "@type": "Person",
     "@id": `${siteUrl}/#person`,
     name: siteContent.name,
-    alternateName: ["Sparsh Edits", "Sparsh Sharma Video Editor"],
+    alternateName: [
+      "Sparsh Edits",
+      "Sparsh Sharma Video Editor",
+      "sparshedits.com",
+      "Sparsh Edits Bengaluru",
+    ],
     jobTitle: "AI Reel Editor & Short-form Video Editor",
     description: seoConfig.description,
     url: siteUrl,
@@ -259,7 +290,7 @@ export function getWebSiteJsonLd() {
     "@type": "WebSite",
     "@id": `${siteUrl}/#website`,
     name: seoConfig.siteName,
-    alternateName: [siteContent.name, "Sparsh Sharma Video Editor Bengaluru"],
+    alternateName: [siteContent.name, "Sparsh Sharma", "sparshedits.com", "Sparsh Sharma Video Editor Bengaluru"],
     url: siteUrl,
     description: seoConfig.description,
     inLanguage: "en-IN",

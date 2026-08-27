@@ -63,6 +63,7 @@ export function Navbar() {
           >
             {siteContent.name.split(" ")[0]}
             <span className="text-accent-blue">.</span>
+            <span className="sr-only"> {siteContent.brand} — {siteContent.domain}</span>
           </button>
 
           <nav className="hidden items-center gap-8 lg:flex">

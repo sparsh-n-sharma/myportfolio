@@ -22,8 +22,17 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           <div className="lg:col-span-2">
             <p className="font-display text-2xl font-bold">{siteContent.name}</p>
+            <p className="mt-1 text-sm font-medium text-accent-blue">
+              {siteContent.brand} —{" "}
+              <a
+                href={siteContent.websiteUrl}
+                className="underline-offset-2 hover:underline"
+              >
+                {siteContent.domain}
+              </a>
+            </p>
             <p className="mt-2 max-w-sm text-sm leading-relaxed text-muted">
-              {siteContent.title}. Based in {siteContent.location}.
+              Official website of {siteContent.name}. {siteContent.title}. Based in {siteContent.location}.
             </p>
             <p className="mt-3 max-w-md text-sm leading-relaxed text-muted">
               AI reel editor & short-form video specialist in Bengaluru, India. Instagram Reels, YouTube Shorts, and monthly editing packages at sparshedits.com

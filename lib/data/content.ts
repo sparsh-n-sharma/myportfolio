@@ -1,5 +1,8 @@
 export const siteContent = {
   name: "Sparsh Sharma",
+  brand: "Sparsh Edits",
+  domain: "sparshedits.com",
+  websiteUrl: "https://sparshedits.com",
   firstName: "SPARSH",
   lastName: "SHARMA",
   title: "AI Reel Editor & Short-Form Video Specialist",
@@ -77,7 +80,7 @@ export const siteContent = {
     cta: "Get a quote",
   },
   navCta: "Get a quote",
-  footer: "Made with ♥ by BytesCode",
+  footer: "© 2026 Sparsh Sharma · Sparsh Edits · sparshedits.com — Made with ♥ by BytesCode",
   retainer: {
     eyebrow: "Monthly Partner",
     headline: "Need 20–30 reels every month?",

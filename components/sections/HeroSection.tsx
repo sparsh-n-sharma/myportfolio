@@ -138,7 +138,13 @@ export function HeroSection() {
             transition={{ delay: 0.55, duration: 0.5 }}
             className="mt-2 text-sm text-white/60 md:text-base"
           >
-            {siteContent.location}
+            {siteContent.location} ·{" "}
+            <a
+              href={siteContent.websiteUrl}
+              className="text-white/80 underline-offset-2 hover:text-white hover:underline"
+            >
+              {siteContent.domain}
+            </a>
           </motion.p>
 
           <motion.p

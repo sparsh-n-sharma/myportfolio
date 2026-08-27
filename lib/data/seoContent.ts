@@ -24,7 +24,11 @@ export const searchPhrases = [
 
 export const localServiceBlocks = [
   {
-    id: "ai-reel-editor",
+    id: "official-site",
+    heading: "Sparsh Sharma — Official Website sparshedits.com",
+    body: "This is the official website of Sparsh Sharma (Sparsh Edits). Sparsh Sharma is a video editor based in Bengaluru, India — not affiliated with other social media accounts using similar names. Book AI reel editing, Instagram Reels, and YouTube Shorts at sparshedits.com.",
+  },
+  {
     heading: "Best AI Reel Editor in Bengaluru & Bangalore",
     body: "Looking for the best AI reel editor in Bengaluru? Sparsh Edits (Sparsh Sharma) creates AI-assisted and AI-enhanced Instagram Reels, YouTube Shorts, and social clips for brands, creators, and agencies. Based in Bengaluru, Karnataka — serving clients across Bangalore, India, and remotely worldwide.",
   },
