@@ -8,7 +8,7 @@ export const siteContent = {
     "I turn raw footage into scroll-stopping Reels, Shorts, and social content for brands, creators, and agencies.",
   aboutIntro:
     "The editor behind the reels — short-form editing, motion graphics, and visual content that brands actually want to post.",
-  email: "hello@sparshsharma.com",
+  email: "sparsh.n.sharma@gmail.com",
   social: {
     linkedin: "https://linkedin.com/in/sparshsharma",
     instagram: "https://instagram.com/sparshsharma",
