@@ -11,8 +11,8 @@ export function FaqSection() {
       <div className="container-wide">
         <SectionHeader
           eyebrow="FAQ"
-          title="Short-form & AI reel editing in Bengaluru"
-          description="Common questions about hiring Sparsh Edits for Reels, Shorts, and monthly video editing across India."
+          title="Best AI Reel Editor in Bengaluru — FAQ"
+          description="Answers about hiring Sparsh Edits for AI reels, Instagram Reels, YouTube Shorts, and monthly video editing in Bangalore and India."
         />
 
         <div className="mx-auto max-w-3xl space-y-4">

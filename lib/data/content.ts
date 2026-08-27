@@ -2,7 +2,8 @@ export const siteContent = {
   name: "Sparsh Sharma",
   firstName: "SPARSH",
   lastName: "SHARMA",
-  title: "Short-form Video Editor & Motion Designer",
+  title: "AI Reel Editor & Short-Form Video Specialist",
+  seoSubtitle: "Best AI Reel Editor · Bengaluru & Bangalore, India",
   location: "Bengaluru, India",
   tagline:
     "Bengaluru-based short-form video editor — I turn raw footage into scroll-stopping Reels, Shorts, and AI-assisted social content for brands, creators, and agencies across India.",

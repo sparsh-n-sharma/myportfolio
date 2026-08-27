@@ -12,6 +12,7 @@ import { BeforeAfterSection } from "@/components/sections/BeforeAfterSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { HeroSection } from "@/components/sections/HeroSection";
+import { LocalSeoSection } from "@/components/sections/LocalSeoSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { RetainerSection } from "@/components/sections/RetainerSection";
 import { ShowreelSection } from "@/components/sections/ShowreelSection";
@@ -63,6 +64,7 @@ export function PortfolioShell() {
             <ProjectsSection onProjectSelect={setSelectedProject} />
             <BeforeAfterSection />
             <AudienceSection />
+            <LocalSeoSection />
             <AboutSection />
             <FaqSection />
             <ContactSection />

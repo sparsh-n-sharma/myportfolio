@@ -105,22 +105,31 @@ export function HeroSection() {
             {siteContent.availability}
           </motion.div>
 
-          <h1 className="font-display font-extrabold leading-none tracking-tight text-white">
+          <div className="font-display font-extrabold leading-none tracking-tight text-white" aria-hidden="true">
             <span className="block whitespace-nowrap text-5xl sm:text-6xl md:text-8xl lg:text-9xl 2xl:text-[12rem]">
               <LetterReveal text={siteContent.firstName} />
             </span>
             <span className="mt-1 block whitespace-nowrap text-5xl sm:text-6xl md:text-8xl lg:text-9xl 2xl:text-[12rem]">
               <LetterReveal text={siteContent.lastName} delay={0.2} />
             </span>
-          </h1>
+          </div>
 
-          <motion.p
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.5 }}
             className="mt-5 text-xl font-medium text-white/90 md:text-2xl lg:text-3xl"
           >
-            {siteContent.title}
+            {siteContent.name} — {siteContent.title}
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.52, duration: 0.5 }}
+            className="mt-2 text-sm font-medium text-accent-blue/90 md:text-base"
+          >
+            {siteContent.seoSubtitle}
           </motion.p>
 
           <motion.p

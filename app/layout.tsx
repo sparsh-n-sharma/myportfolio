@@ -82,6 +82,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-IN" className="dark h-full scroll-smooth" suppressHydrationWarning>
+      <head>
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM site summary" />
+        <link rel="alternate" type="text/plain" href="/ai.txt" title="AI crawler info" />
+      </head>
       <body
         className={`${plusJakarta.variable} ${dmSans.variable} min-h-full antialiased`}
       >

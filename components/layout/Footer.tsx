@@ -2,8 +2,9 @@ import { siteContent } from "@/lib/data/content";
 
 const footerLinks = [
   { label: "Work", href: "#projects" },
+  { label: "Services", href: "#services" },
   { label: "Retainer", href: "#retainer" },
-  { label: "Showreel", href: "#showreel" },
+  { label: "FAQ", href: "#faq" },
   { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
 ] as const;
@@ -25,7 +26,7 @@ export function Footer() {
               {siteContent.title}. Based in {siteContent.location}.
             </p>
             <p className="mt-3 max-w-md text-sm leading-relaxed text-muted">
-              {siteContent.tagline}
+              AI reel editor & short-form video specialist in Bengaluru, India. Instagram Reels, YouTube Shorts, and monthly editing packages at sparshedits.com
             </p>
           </div>
 

@@ -1,5 +1,7 @@
 import {
   getFaqJsonLd,
+  getItemListJsonLd,
+  getLocalBusinessJsonLd,
   getPersonJsonLd,
   getProfessionalServiceJsonLd,
   getWebSiteJsonLd,
@@ -7,17 +9,19 @@ import {
 
 const schemas = [
   getPersonJsonLd(),
+  getLocalBusinessJsonLd(),
   getProfessionalServiceJsonLd(),
   getWebSiteJsonLd(),
+  getItemListJsonLd(),
   getFaqJsonLd(),
 ];
 
 export function JsonLd() {
   return (
     <>
-      {schemas.map((schema) => (
+      {schemas.map((schema, i) => (
         <script
-          key={schema["@type"] as string}
+          key={`schema-${i}-${schema["@type"] as string}`}
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
