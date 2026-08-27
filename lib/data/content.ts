@@ -5,18 +5,18 @@ export const siteContent = {
   title: "Short-form Video Editor & Motion Designer",
   location: "Bengaluru, India",
   tagline:
-    "I turn raw footage into scroll-stopping Reels, Shorts, and social content for brands, creators, and agencies.",
+    "Bengaluru-based short-form video editor — I turn raw footage into scroll-stopping Reels, Shorts, and AI-assisted social content for brands, creators, and agencies across India.",
   aboutIntro:
-    "The editor behind the reels — short-form editing, motion graphics, and visual content that brands actually want to post.",
+    "Bengaluru's short-form & AI reel editor — crafting Instagram Reels, YouTube Shorts, and motion content that brands actually want to post.",
   email: "sparsh.n.sharma@gmail.com",
   social: {
     linkedin: "https://linkedin.com/in/sparshsharma",
     instagram: "https://instagram.com/sparshsharma",
     behance: "https://behance.net/sparshsharma",
   },
-  bio: "Hey, I'm Sparsh. I edit short-form content, build motion graphics, and create visuals that brands actually want to post.",
+  bio: "Hey, I'm Sparsh — a Bengaluru-based short-form video editor specializing in Instagram Reels, YouTube Shorts, AI-assisted video, and motion graphics for brands across India.",
   bioExtended:
-    "Based in Bengaluru — available for freelance and monthly retainers with fast turnaround. Whether you need 10 reels a month or a one-off product cut, I handle editing, motion, captions, color, and sound so your team can focus on shooting.",
+    "Based in Bengaluru — available for freelance and monthly retainers with fast turnaround. Whether you need 10 AI-enhanced reels a month or a one-off product cut, I handle editing, motion, captions, color, and sound so your team can focus on shooting.",
   experience: [
     {
       year: "2021 — Present",

@@ -10,6 +10,7 @@ import { AboutSection } from "@/components/sections/AboutSection";
 import { AudienceSection } from "@/components/sections/AudienceSection";
 import { BeforeAfterSection } from "@/components/sections/BeforeAfterSection";
 import { ContactSection } from "@/components/sections/ContactSection";
+import { FaqSection } from "@/components/sections/FaqSection";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { RetainerSection } from "@/components/sections/RetainerSection";
@@ -63,6 +64,7 @@ export function PortfolioShell() {
             <BeforeAfterSection />
             <AudienceSection />
             <AboutSection />
+            <FaqSection />
             <ContactSection />
           </main>
           <div className="relative z-10">
