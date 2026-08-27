@@ -76,7 +76,7 @@ export const siteContent = {
     cta: "Get a quote",
   },
   navCta: "Get a quote",
-  footer: "© 2026 Sparsh Sharma. Crafted in Bengaluru.",
+  footer: "Made with ♥ by BytesCode",
   retainer: {
     eyebrow: "Monthly Partner",
     headline: "Need 20–30 reels every month?",
